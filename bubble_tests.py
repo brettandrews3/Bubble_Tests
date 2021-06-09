@@ -22,4 +22,5 @@ while i < length:
     print('Bubble solution #' + str(i), 'score:', scores[i])
     i = i + 1
 
+# Return to print calculated averages, scores[i] for highest values
 print('Bubble tests:', len(scores))
