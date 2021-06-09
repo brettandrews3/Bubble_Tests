@@ -19,7 +19,7 @@ print('Bubble solution #2 score:', scores[2], '\n')
 i = 0
 length = len(scores)
 while i < length:
-    print('Bubble solution #', i, 'score:', scores[i])
+    print('Bubble solution #' + str(i), 'score:', scores[i])
     i = i + 1
 
 print('Bubble tests:', len(scores))
