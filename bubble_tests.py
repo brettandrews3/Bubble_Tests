@@ -8,9 +8,18 @@ scores = [60, 50, 60, 58, 54, 54,
             46, 31, 57, 52, 44, 18,
             41, 53, 55, 61, 51, 44]
 
-# Here's a few print statements that pull from the list:
+# Here's a few print statements that pull from the list. Write while loop to iterate this:
+"""
 print('Bubble solution #0 score:', scores[0])
 print('Bubble solution #1 score:', scores[1])
 print('Bubble solution #2 score:', scores[2], '\n')
+"""
+
+# While loop to print 'Bubble solution #x score: ':
+i = 0
+length = len(scores)
+while i < length:
+    print('Bubble solution #', i, 'score:', scores[i])
+    i = i + 1
 
 print('Bubble tests:', len(scores))
