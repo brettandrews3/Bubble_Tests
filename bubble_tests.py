@@ -8,12 +8,14 @@ scores = [60, 50, 60, 58, 54, 54,
             46, 31, 57, 52, 44, 18,
             41, 53, 55, 61, 51, 44]
 
-# Here's a few print statements that pull from the list. Write while loop to iterate this:
-"""
-print('Bubble solution #0 score:', scores[0])
-print('Bubble solution #1 score:', scores[1])
-"""
+# Iterates through list 'scores' once to find the high_score:
+high_score = 0
+length = len(scores)
+for i in range(length):
+    if scores[i] > high_score:
+        high_score = scores[i]
 
+# Write while loop to iterate through 'scores' list...:
 """
 # While loop to print 'Bubble solution #i score: i':
 i = 0
@@ -23,12 +25,14 @@ while i < length:
     i = i + 1
 """
 
-# For loop version of the same statement:
+# ...and here's the for loop version of that while statement:
 i = 0
 for score in scores:
     output = 'Bubble solution #' + str(i) + ': ' + str(score)
     print(output)
     i = i + 1
 
-#TODO Return to print calculated averages, scores[i] for highest values
-print('Bubble tests:', len(scores))
+#TODO Return to print calculated averages
+# Prints number of tests and high_score from the list 'scores':
+print('Bubble tests:', len(scores), '\n')
+print('The highest bubble score is:', high_score)
