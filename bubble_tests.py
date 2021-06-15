@@ -15,6 +15,17 @@ for i in range(length):
     if scores[i] > high_score:
         high_score = scores[i]
 
+# For loop finds all tests that match high_score, adds them to list best_solutions:
+best_solutions = []
+for i in range(length):
+    if high_score == scores[i]:
+        best_solutions.append(i)
+
+# Print the results: number of tests, high_score, best_solutions:
+print('Bubble tests:', length)
+print('Highest bubble test score:', high_score)
+print('Tests with the highest score:', best_solutions)
+
 # Write while loop to iterate through 'scores' list...:
 """
 # While loop to print 'Bubble solution #i score: i':
