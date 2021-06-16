@@ -36,13 +36,13 @@ most_effective = 0
 for i in range(length):
     if scores[i] == high_score and costs[i] < cost:
         most_effective = i
-        cost = costs[[i]
+        cost = costs[i]
 
 # Print the results: number of tests, high_score, best_solutions, most_effective:
 print('Bubble tests:', length)
 print('Highest bubble test score:', high_score)
 print('Tests with the highest score:', best_solutions)
-print('Bubble test,' most_effective, 'is the best one with a cost of', costs[most_effective])
+print('Bubble test', most_effective, 'is the best one with a cost of', costs[most_effective])
 
 # Write while loop to iterate through 'scores' list...:
 """
