@@ -29,39 +29,18 @@ for i in range(length):
     if high_score == scores[i]:
         best_solutions.append(i)
 
-# For loop determines most effective bubble test by looking for
-# lowest cost and high_score to produce most_effective:
-cost = 100.0
-most_effective = 0
-for i in range(length):
-    if scores[i] == high_score and costs[i] < cost:
-        most_effective = i
-        cost = costs[i]
 
-# Print the results: number of tests, high_score, best_solutions, most_effective:
-print('Bubble tests:', length)
-print('Highest bubble test score:', high_score)
-print('Tests with the highest score:', best_solutions)
-print('Bubble test', most_effective, 'is the best one with a cost of', costs[most_effective])
 
-# Write while loop to iterate through 'scores' list...:
-"""
-# While loop to print 'Bubble solution #i score: i':
-i = 0
-length = len(scores)
-while i < length:
-    print('Bubble solution #' + str(i), 'score:', scores[i])
-    i = i + 1
-"""
+# This branch tests out a simplified index for loop to find the most
+# cost-effective bubble test:
+cost = 100.0                        # Using float because cost is a decimal value
+most_effective = 0                  # Using int because we're looping through the list placements
 
-# ...and here's the for loop version of that while statement:
-i = 0
-for score in scores:
-    output = 'Bubble solution #' + str(i) + ': ' + str(score)
-    print(output)
-    i = i + 1
+for i in range(len(best_solutions)):            # Now iterating through a best_solutions list of 2 items.
+    index = best_solutions[i]
+    if cost > costs[index]:
+        most_effective = index
+        cost = costs[index]
 
-#TODO Return to print calculated averages
-# Prints number of tests and high_score from the list 'scores':
-print('Bubble tests:', len(scores), '\n')
-print('The highest bubble score is:', high_score)
+print('Solution', most_effective,
+        'is the most effective test with a cost of $' + str(costs[most_effective]) + '.')
